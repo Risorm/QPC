@@ -1,0 +1,364 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3F5F54B0-E220-45A9-8ECC-2C37C3208481}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EventClass</RootNamespace>
+    <AssemblyName>ConsoleApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>NUnit-2.6.4\bin\framework\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="PowerCollections, Version=1.0.2141.24679, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>PowerCollections\Binaries\PowerCollections.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Event.cs" />
+    <Compile Include="PowerCollections\Source\PowerCollections\Algorithms.cs" />
+    <Compile Include="PowerCollections\Source\PowerCollections\AssemblyInfo.cs" />
+    <Compile Include="PowerCollections\Source\PowerCollections\Bag.cs" />
+    <Compile Include="PowerCollections\Source\PowerCollections\BigList.cs" />
+    <Compile Include="PowerCollections\Source\PowerCollections\CollectionBase.cs" />
+    <Compile Include="PowerCollections\Source\PowerCollections\Comparers.cs" />
+    <Compile Include="PowerCollections\Source\PowerCollections\Deque.cs" />
+    <Compile Include="PowerCollections\Source\PowerCollections\DictionaryBase.cs" />
+    <Compile Include="PowerCollections\Source\PowerCollections\Hash.cs" />
+    <Compile Include="PowerCollections\Source\PowerCollections\ListBase.cs" />
+    <Compile Include="PowerCollections\Source\PowerCollections\MultiDictionary.cs" />
+    <Compile Include="PowerCollections\Source\PowerCollections\MultiDictionaryBase.cs" />
+    <Compile Include="PowerCollections\Source\PowerCollections\OrderedBag.cs" />
+    <Compile Include="PowerCollections\Source\PowerCollections\OrderedDictionary.cs" />
+    <Compile Include="PowerCollections\Source\PowerCollections\OrderedMultiDictionary.cs" />
+    <Compile Include="PowerCollections\Source\PowerCollections\OrderedSet.cs" />
+    <Compile Include="PowerCollections\Source\PowerCollections\Pair.cs" />
+    <Compile Include="PowerCollections\Source\PowerCollections\ReadOnlyCollectionBase.cs" />
+    <Compile Include="PowerCollections\Source\PowerCollections\ReadOnlyDictionaryBase.cs" />
+    <Compile Include="PowerCollections\Source\PowerCollections\ReadOnlyListBase.cs" />
+    <Compile Include="PowerCollections\Source\PowerCollections\ReadOnlyMultiDictionaryBase.cs" />
+    <Compile Include="PowerCollections\Source\PowerCollections\RedBlack.cs" />
+    <Compile Include="PowerCollections\Source\PowerCollections\Set.cs" />
+    <Compile Include="PowerCollections\Source\PowerCollections\Strings.cs" />
+    <Compile Include="PowerCollections\Source\PowerCollections\Triple.cs" />
+    <Compile Include="PowerCollections\Source\PowerCollections\Util.cs" />
+    <Compile Include="PowerCollections\Source\UnitTests\AlgorithmsTests.cs" />
+    <Compile Include="PowerCollections\Source\UnitTests\AssemblyInfo.cs" />
+    <Compile Include="PowerCollections\Source\UnitTests\BagTests.cs" />
+    <Compile Include="PowerCollections\Source\UnitTests\BigListTests.cs" />
+    <Compile Include="PowerCollections\Source\UnitTests\CollectionBaseTests.cs" />
+    <Compile Include="PowerCollections\Source\UnitTests\ComparersTests.cs" />
+    <Compile Include="PowerCollections\Source\UnitTests\DequeTests.cs" />
+    <Compile Include="PowerCollections\Source\UnitTests\DictionaryBaseTests.cs" />
+    <Compile Include="PowerCollections\Source\UnitTests\HashTests.cs" />
+    <Compile Include="PowerCollections\Source\UnitTests\InterfaceTests.cs" />
+    <Compile Include="PowerCollections\Source\UnitTests\ListBaseTests.cs" />
+    <Compile Include="PowerCollections\Source\UnitTests\MainProgram.cs" />
+    <Compile Include="PowerCollections\Source\UnitTests\MultiDictionaryBaseTests.cs" />
+    <Compile Include="PowerCollections\Source\UnitTests\MultiDictionaryTests.cs" />
+    <Compile Include="PowerCollections\Source\UnitTests\OrderedBagTests.cs" />
+    <Compile Include="PowerCollections\Source\UnitTests\OrderedDictionaryTests.cs" />
+    <Compile Include="PowerCollections\Source\UnitTests\OrderedMultiDictionaryTests.cs" />
+    <Compile Include="PowerCollections\Source\UnitTests\OrderedSetTests.cs" />
+    <Compile Include="PowerCollections\Source\UnitTests\PairTests.cs" />
+    <Compile Include="PowerCollections\Source\UnitTests\RedBlackTests.cs" />
+    <Compile Include="PowerCollections\Source\UnitTests\SetTests.cs" />
+    <Compile Include="PowerCollections\Source\UnitTests\TripleTests.cs" />
+    <Compile Include="PowerCollections\Source\UnitTests\UtilTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="NUnit-2.6.4\bin\agent.conf" />
+    <None Include="NUnit-2.6.4\bin\agent.log.conf" />
+    <None Include="NUnit-2.6.4\bin\launcher.log.conf" />
+    <None Include="NUnit-2.6.4\bin\nunit-agent-x86.exe.config" />
+    <None Include="NUnit-2.6.4\bin\nunit-agent.exe.config" />
+    <None Include="NUnit-2.6.4\bin\nunit-console-x86.exe.config" />
+    <None Include="NUnit-2.6.4\bin\nunit-console.exe.config" />
+    <None Include="NUnit-2.6.4\bin\nunit-x86.exe.config" />
+    <None Include="NUnit-2.6.4\bin\nunit.exe.config" />
+    <None Include="NUnit-2.6.4\bin\NUnitTests.config" />
+    <None Include="NUnit-2.6.4\bin\NUnitTests.nunit" />
+    <None Include="NUnit-2.6.4\bin\pnunit-agent.exe.config" />
+    <None Include="NUnit-2.6.4\bin\pnunit-launcher.exe.config" />
+    <None Include="NUnit-2.6.4\bin\runpnunit.bat" />
+    <None Include="NUnit-2.6.4\bin\test.conf" />
+    <None Include="NUnit-2.6.4\doc\files\QuickStart.doc" />
+    <None Include="NUnit-2.6.4\doc\files\QuickStart.Spanish.doc" />
+    <None Include="NUnit-2.6.4\doc\files\Results.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PowerCollections\Documentation\PowerCollections.chm" />
+    <None Include="PowerCollections\Source\PowerCollections\app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="NUnit-2.6.4\bin\framework\nunit.framework.dll" />
+    <Content Include="NUnit-2.6.4\bin\framework\nunit.framework.xml" />
+    <Content Include="NUnit-2.6.4\bin\framework\nunit.mocks.dll" />
+    <Content Include="NUnit-2.6.4\bin\framework\pnunit.framework.dll" />
+    <Content Include="NUnit-2.6.4\bin\lib\Images\Ellipsis.gif" />
+    <Content Include="NUnit-2.6.4\bin\lib\Images\pinned.gif" />
+    <Content Include="NUnit-2.6.4\bin\lib\Images\Tree\Circles\Failure.jpg" />
+    <Content Include="NUnit-2.6.4\bin\lib\Images\Tree\Circles\Ignored.jpg" />
+    <Content Include="NUnit-2.6.4\bin\lib\Images\Tree\Circles\Inconclusive.jpg" />
+    <Content Include="NUnit-2.6.4\bin\lib\Images\Tree\Circles\Skipped.jpg" />
+    <Content Include="NUnit-2.6.4\bin\lib\Images\Tree\Circles\Success.jpg" />
+    <Content Include="NUnit-2.6.4\bin\lib\Images\Tree\Classic\Failure.jpg" />
+    <Content Include="NUnit-2.6.4\bin\lib\Images\Tree\Classic\Ignored.jpg" />
+    <Content Include="NUnit-2.6.4\bin\lib\Images\Tree\Classic\Inconclusive.jpg" />
+    <Content Include="NUnit-2.6.4\bin\lib\Images\Tree\Classic\Skipped.jpg" />
+    <Content Include="NUnit-2.6.4\bin\lib\Images\Tree\Classic\Success.jpg" />
+    <Content Include="NUnit-2.6.4\bin\lib\Images\Tree\Default\Failure.png" />
+    <Content Include="NUnit-2.6.4\bin\lib\Images\Tree\Default\Ignored.png" />
+    <Content Include="NUnit-2.6.4\bin\lib\Images\Tree\Default\Inconclusive.png" />
+    <Content Include="NUnit-2.6.4\bin\lib\Images\Tree\Default\Skipped.png" />
+    <Content Include="NUnit-2.6.4\bin\lib\Images\Tree\Default\Success.png" />
+    <Content Include="NUnit-2.6.4\bin\lib\Images\Tree\Visual Studio\Failure.png" />
+    <Content Include="NUnit-2.6.4\bin\lib\Images\Tree\Visual Studio\Ignored.png" />
+    <Content Include="NUnit-2.6.4\bin\lib\Images\Tree\Visual Studio\Inconclusive.png" />
+    <Content Include="NUnit-2.6.4\bin\lib\Images\Tree\Visual Studio\SeriousWarning.png" />
+    <Content Include="NUnit-2.6.4\bin\lib\Images\Tree\Visual Studio\Skipped.png" />
+    <Content Include="NUnit-2.6.4\bin\lib\Images\Tree\Visual Studio\Success.png" />
+    <Content Include="NUnit-2.6.4\bin\lib\Images\unpinned.gif" />
+    <Content Include="NUnit-2.6.4\bin\lib\log4net.dll" />
+    <Content Include="NUnit-2.6.4\bin\lib\NSubstitute.dll" />
+    <Content Include="NUnit-2.6.4\bin\lib\NSubstitute.xml" />
+    <Content Include="NUnit-2.6.4\bin\lib\nunit-console-runner.dll" />
+    <Content Include="NUnit-2.6.4\bin\lib\nunit-gui-runner.dll" />
+    <Content Include="NUnit-2.6.4\bin\lib\nunit.core.dll" />
+    <Content Include="NUnit-2.6.4\bin\lib\nunit.core.interfaces.dll" />
+    <Content Include="NUnit-2.6.4\bin\lib\nunit.uiexception.dll" />
+    <Content Include="NUnit-2.6.4\bin\lib\nunit.uikit.dll" />
+    <Content Include="NUnit-2.6.4\bin\lib\nunit.util.dll" />
+    <Content Include="NUnit-2.6.4\bin\lib\Rhino.Mocks.dll" />
+    <Content Include="NUnit-2.6.4\bin\lib\Rhino.Mocks.xml" />
+    <Content Include="NUnit-2.6.4\bin\nunit-agent-x86.exe" />
+    <Content Include="NUnit-2.6.4\bin\nunit-agent.exe" />
+    <Content Include="NUnit-2.6.4\bin\nunit-console-x86.exe" />
+    <Content Include="NUnit-2.6.4\bin\nunit-console.exe" />
+    <Content Include="NUnit-2.6.4\bin\nunit-editor.exe" />
+    <Content Include="NUnit-2.6.4\bin\nunit-x86.exe" />
+    <Content Include="NUnit-2.6.4\bin\nunit.exe" />
+    <Content Include="NUnit-2.6.4\bin\nunit.framework.dll" />
+    <Content Include="NUnit-2.6.4\bin\NUnitFitTests.html" />
+    <Content Include="NUnit-2.6.4\bin\pnunit-agent.exe" />
+    <Content Include="NUnit-2.6.4\bin\pnunit-launcher.exe" />
+    <Content Include="NUnit-2.6.4\bin\pnunit.framework.dll" />
+    <Content Include="NUnit-2.6.4\bin\pnunit.tests.dll" />
+    <Content Include="NUnit-2.6.4\bin\TestResult-net-3.5.xml" />
+    <Content Include="NUnit-2.6.4\bin\tests\mock-assembly.dll" />
+    <Content Include="NUnit-2.6.4\bin\tests\nonamespace-assembly.dll" />
+    <Content Include="NUnit-2.6.4\bin\tests\nunit-console.tests.dll" />
+    <Content Include="NUnit-2.6.4\bin\tests\nunit-editor.tests.dll" />
+    <Content Include="NUnit-2.6.4\bin\tests\nunit-gui.tests.dll" />
+    <Content Include="NUnit-2.6.4\bin\tests\nunit.core.tests.dll" />
+    <Content Include="NUnit-2.6.4\bin\tests\nunit.core.tests.net45.dll" />
+    <Content Include="NUnit-2.6.4\bin\tests\nunit.framework.dll" />
+    <Content Include="NUnit-2.6.4\bin\tests\nunit.framework.tests.dll" />
+    <Content Include="NUnit-2.6.4\bin\tests\nunit.framework.tests.net45.dll" />
+    <Content Include="NUnit-2.6.4\bin\tests\nunit.mocks.tests.dll" />
+    <Content Include="NUnit-2.6.4\bin\tests\nunit.uiexception.tests.dll" />
+    <Content Include="NUnit-2.6.4\bin\tests\nunit.uikit.tests.dll" />
+    <Content Include="NUnit-2.6.4\bin\tests\nunit.util.tests.dll" />
+    <Content Include="NUnit-2.6.4\bin\tests\test-assembly-net45.dll" />
+    <Content Include="NUnit-2.6.4\bin\tests\test-assembly.dll" />
+    <Content Include="NUnit-2.6.4\bin\tests\test-utilities.dll" />
+    <Content Include="NUnit-2.6.4\doc\actionAttributes.html" />
+    <Content Include="NUnit-2.6.4\doc\addinsDialog.html" />
+    <Content Include="NUnit-2.6.4\doc\assemblyIsolation.html" />
+    <Content Include="NUnit-2.6.4\doc\assertions.html" />
+    <Content Include="NUnit-2.6.4\doc\attributes.html" />
+    <Content Include="NUnit-2.6.4\doc\category.html" />
+    <Content Include="NUnit-2.6.4\doc\classicModel.html" />
+    <Content Include="NUnit-2.6.4\doc\codeFuncs.js" />
+    <Content Include="NUnit-2.6.4\doc\collectionAssert.html" />
+    <Content Include="NUnit-2.6.4\doc\collectionConstraints.html" />
+    <Content Include="NUnit-2.6.4\doc\combinatorial.html" />
+    <Content Include="NUnit-2.6.4\doc\comparisonAsserts.html" />
+    <Content Include="NUnit-2.6.4\doc\comparisonConstraints.html" />
+    <Content Include="NUnit-2.6.4\doc\compoundConstraints.html" />
+    <Content Include="NUnit-2.6.4\doc\conditionAsserts.html" />
+    <Content Include="NUnit-2.6.4\doc\conditionConstraints.html" />
+    <Content Include="NUnit-2.6.4\doc\configEditor.html" />
+    <Content Include="NUnit-2.6.4\doc\configFiles.html" />
+    <Content Include="NUnit-2.6.4\doc\consoleCommandLine.html" />
+    <Content Include="NUnit-2.6.4\doc\constraintModel.html" />
+    <Content Include="NUnit-2.6.4\doc\contextMenu.html" />
+    <Content Include="NUnit-2.6.4\doc\culture.html" />
+    <Content Include="NUnit-2.6.4\doc\customConstraints.html" />
+    <Content Include="NUnit-2.6.4\doc\datapoint.html" />
+    <Content Include="NUnit-2.6.4\doc\datapointProviders.html" />
+    <Content Include="NUnit-2.6.4\doc\delayedConstraint.html" />
+    <Content Include="NUnit-2.6.4\doc\description.html" />
+    <Content Include="NUnit-2.6.4\doc\directoryAssert.html" />
+    <Content Include="NUnit-2.6.4\doc\equalConstraint.html" />
+    <Content Include="NUnit-2.6.4\doc\equalityAsserts.html" />
+    <Content Include="NUnit-2.6.4\doc\eventListeners.html" />
+    <Content Include="NUnit-2.6.4\doc\exception.html" />
+    <Content Include="NUnit-2.6.4\doc\exceptionAsserts.html" />
+    <Content Include="NUnit-2.6.4\doc\explicit.html" />
+    <Content Include="NUnit-2.6.4\doc\extensibility.html" />
+    <Content Include="NUnit-2.6.4\doc\extensionTips.html" />
+    <Content Include="NUnit-2.6.4\doc\favicon.ico" />
+    <Content Include="NUnit-2.6.4\doc\fileAssert.html" />
+    <Content Include="NUnit-2.6.4\doc\files\Summary.xslt" />
+    <Content Include="NUnit-2.6.4\doc\files\TestResult.xml" />
+    <Content Include="NUnit-2.6.4\doc\fixtureSetup.html" />
+    <Content Include="NUnit-2.6.4\doc\fixtureTeardown.html" />
+    <Content Include="NUnit-2.6.4\doc\getStarted.html" />
+    <Content Include="NUnit-2.6.4\doc\guiCommandLine.html" />
+    <Content Include="NUnit-2.6.4\doc\identityAsserts.html" />
+    <Content Include="NUnit-2.6.4\doc\ignore.html" />
+    <Content Include="NUnit-2.6.4\doc\img\addinsDialog.jpg" />
+    <Content Include="NUnit-2.6.4\doc\img\advancedSettings.jpg" />
+    <Content Include="NUnit-2.6.4\doc\img\assembliesTab.jpg" />
+    <Content Include="NUnit-2.6.4\doc\img\assemblyReloadSettings.jpg" />
+    <Content Include="NUnit-2.6.4\doc\img\bulletOff.gif" />
+    <Content Include="NUnit-2.6.4\doc\img\bulletOn.gif" />
+    <Content Include="NUnit-2.6.4\doc\img\configEditor.jpg" />
+    <Content Include="NUnit-2.6.4\doc\img\console-mock.jpg" />
+    <Content Include="NUnit-2.6.4\doc\img\generalSettings.jpg" />
+    <Content Include="NUnit-2.6.4\doc\img\generalTab.jpg" />
+    <Content Include="NUnit-2.6.4\doc\img\gui-screenshot.jpg" />
+    <Content Include="NUnit-2.6.4\doc\img\gui-verify.jpg" />
+    <Content Include="NUnit-2.6.4\doc\img\internalTraceSettings.jpg" />
+    <Content Include="NUnit-2.6.4\doc\img\langFilter.gif" />
+    <Content Include="NUnit-2.6.4\doc\img\logo.gif" />
+    <Content Include="NUnit-2.6.4\doc\img\miniGui.jpg" />
+    <Content Include="NUnit-2.6.4\doc\img\nunitTestAdapter.png" />
+    <Content Include="NUnit-2.6.4\doc\img\projectEditorSettings.jpg" />
+    <Content Include="NUnit-2.6.4\doc\img\runtimeSelectionSettings.jpg" />
+    <Content Include="NUnit-2.6.4\doc\img\testLoadSettings.jpg" />
+    <Content Include="NUnit-2.6.4\doc\img\testOutputSettings.jpg" />
+    <Content Include="NUnit-2.6.4\doc\img\testProperties.jpg" />
+    <Content Include="NUnit-2.6.4\doc\img\testResultSettings.jpg" />
+    <Content Include="NUnit-2.6.4\doc\img\textOutputSettings.jpg" />
+    <Content Include="NUnit-2.6.4\doc\img\treeDisplaySettings.jpg" />
+    <Content Include="NUnit-2.6.4\doc\img\visualStudioSettings.jpg" />
+    <Content Include="NUnit-2.6.4\doc\img\xmlView.jpg" />
+    <Content Include="NUnit-2.6.4\doc\index.html" />
+    <Content Include="NUnit-2.6.4\doc\installation.html" />
+    <Content Include="NUnit-2.6.4\doc\license.html" />
+    <Content Include="NUnit-2.6.4\doc\listMapper.html" />
+    <Content Include="NUnit-2.6.4\doc\mainMenu.html" />
+    <Content Include="NUnit-2.6.4\doc\maxtime.html" />
+    <Content Include="NUnit-2.6.4\doc\multiAssembly.html" />
+    <Content Include="NUnit-2.6.4\doc\nunit-agent.html" />
+    <Content Include="NUnit-2.6.4\doc\nunit-console.html" />
+    <Content Include="NUnit-2.6.4\doc\nunit-gui.html" />
+    <Content Include="NUnit-2.6.4\doc\nunit.css" />
+    <Content Include="NUnit-2.6.4\doc\nunitAddins.html" />
+    <Content Include="NUnit-2.6.4\doc\pairwise.html" />
+    <Content Include="NUnit-2.6.4\doc\parameterizedTests.html" />
+    <Content Include="NUnit-2.6.4\doc\pathConstraints.html" />
+    <Content Include="NUnit-2.6.4\doc\platform.html" />
+    <Content Include="NUnit-2.6.4\doc\pnunit.html" />
+    <Content Include="NUnit-2.6.4\doc\projectEditor.html" />
+    <Content Include="NUnit-2.6.4\doc\property.html" />
+    <Content Include="NUnit-2.6.4\doc\propertyConstraint.html" />
+    <Content Include="NUnit-2.6.4\doc\quickStart.html" />
+    <Content Include="NUnit-2.6.4\doc\quickStartSource.html" />
+    <Content Include="NUnit-2.6.4\doc\random.html" />
+    <Content Include="NUnit-2.6.4\doc\range.html" />
+    <Content Include="NUnit-2.6.4\doc\releaseBreakdown.html" />
+    <Content Include="NUnit-2.6.4\doc\releaseNotes.html" />
+    <Content Include="NUnit-2.6.4\doc\repeat.html" />
+    <Content Include="NUnit-2.6.4\doc\requiredAddin.html" />
+    <Content Include="NUnit-2.6.4\doc\requiresMTA.html" />
+    <Content Include="NUnit-2.6.4\doc\requiresSTA.html" />
+    <Content Include="NUnit-2.6.4\doc\requiresThread.html" />
+    <Content Include="NUnit-2.6.4\doc\reusableConstraint.html" />
+    <Content Include="NUnit-2.6.4\doc\runningTests.html" />
+    <Content Include="NUnit-2.6.4\doc\runtimeSelection.html" />
+    <Content Include="NUnit-2.6.4\doc\sameasConstraint.html" />
+    <Content Include="NUnit-2.6.4\doc\samples.html" />
+    <Content Include="NUnit-2.6.4\doc\sequential.html" />
+    <Content Include="NUnit-2.6.4\doc\setCulture.html" />
+    <Content Include="NUnit-2.6.4\doc\settingsDialog.html" />
+    <Content Include="NUnit-2.6.4\doc\setUICulture.html" />
+    <Content Include="NUnit-2.6.4\doc\setup.html" />
+    <Content Include="NUnit-2.6.4\doc\setupFixture.html" />
+    <Content Include="NUnit-2.6.4\doc\stringAssert.html" />
+    <Content Include="NUnit-2.6.4\doc\stringConstraints.html" />
+    <Content Include="NUnit-2.6.4\doc\suite.html" />
+    <Content Include="NUnit-2.6.4\doc\suiteBuilders.html" />
+    <Content Include="NUnit-2.6.4\doc\teardown.html" />
+    <Content Include="NUnit-2.6.4\doc\test.html" />
+    <Content Include="NUnit-2.6.4\doc\testCase.html" />
+    <Content Include="NUnit-2.6.4\doc\testcaseBuilders.html" />
+    <Content Include="NUnit-2.6.4\doc\testcaseProviders.html" />
+    <Content Include="NUnit-2.6.4\doc\testCaseSource.html" />
+    <Content Include="NUnit-2.6.4\doc\testContext.html" />
+    <Content Include="NUnit-2.6.4\doc\testDecorators.html" />
+    <Content Include="NUnit-2.6.4\doc\testFixture.html" />
+    <Content Include="NUnit-2.6.4\doc\testProperties.html" />
+    <Content Include="NUnit-2.6.4\doc\theory.html" />
+    <Content Include="NUnit-2.6.4\doc\throwsConstraint.html" />
+    <Content Include="NUnit-2.6.4\doc\timeout.html" />
+    <Content Include="NUnit-2.6.4\doc\typeAsserts.html" />
+    <Content Include="NUnit-2.6.4\doc\typeConstraints.html" />
+    <Content Include="NUnit-2.6.4\doc\upgrade.html" />
+    <Content Include="NUnit-2.6.4\doc\utilityAsserts.html" />
+    <Content Include="NUnit-2.6.4\doc\values.html" />
+    <Content Include="NUnit-2.6.4\doc\valueSource.html" />
+    <Content Include="NUnit-2.6.4\doc\vsSupport.html" />
+    <Content Include="NUnit-2.6.4\doc\vsTestAdapter.html" />
+    <Content Include="NUnit-2.6.4\doc\vsTestAdapterLicense.html" />
+    <Content Include="NUnit-2.6.4\doc\vsTestAdapterReleaseNotes.html" />
+    <Content Include="NUnit-2.6.4\doc\writingTests.html" />
+    <Content Include="NUnit-2.6.4\license.txt" />
+    <Content Include="NUnit-2.6.4\Logo.ico" />
+    <Content Include="PowerCollections\Binaries\License.txt" />
+    <Content Include="PowerCollections\Binaries\PowerCollections.dll" />
+    <Content Include="PowerCollections\Binaries\PowerCollections.XML" />
+    <Content Include="PowerCollections\License.txt" />
+    <Content Include="PowerCollections\Source\License.txt" />
+    <Content Include="PowerCollections\Source\PowerCollections.sln" />
+    <Content Include="PowerCollections\Source\PowerCollections\PowerCollections.csproj" />
+    <Content Include="PowerCollections\Source\UnitTests\UnitTests.csproj" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
